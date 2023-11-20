@@ -36,4 +36,3 @@ project.onclick =()=>{
 closeProject.onclick =()=>{
     modal.style.display = 'none';
 }
-const closeme
