@@ -1,0 +1,444 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Commissioner', sans-serif;
+}
+
+:root {
+    --Moderatecyan: hsl(176, 50%, 47%);
+    /*--name: 'copypaste color from styleguide';callup variabluesfor e,g color name */
+    --Darkcyan: hsl(176, 72%, 28%);
+    --Black: hsl(0, 0%, 0%);
+    --Darkgray: hsl(0, 0%, 48%);
+}
+
+body {
+    background: hsl(0, 0%, 93%);
+    position: relative;
+}
+.menu-icon,.close-menu{
+    display: none;
+}
+header {
+    background-image: url(images/image-hero-desktop.jpg);
+    width: 100%;
+    height: 60vh;
+    /* background-size: contain;  (when CONTAIN is used and there are spaces on both side, we use COVER instead ) */
+    background-size: cover;
+    background-repeat: no-repeat;
+    /*(we use no repeat where the image is doubling repeating) */
+    padding: 1rem 2.5rem 0 2.5rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+ul>li {
+    list-style-type: none;
+    display: inline;
+    margin-left: .5rem;
+}
+
+ul>li>a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.section_1 {
+    width: 50%;
+    background: #fff;
+    margin: -7rem auto 1rem auto;
+    /*(Margin order TOP RIGHT BOTTOM LEFT) */
+    border-radius: .3rem;
+    padding: 1.5rem;
+    /* text-align: center; */
+}
+
+.logo-master {
+    display: block;
+    /*images are block element  */
+    margin: -4rem auto 1rem auto;
+}
+
+.section_1>h1 {
+    text-align: center;
+    font-size: 1.5rem;
+    margin-bottom: .7rem;
+    font-style: 800;
+}
+
+.description {
+    text-align: center;
+    font-size: .9rem;
+    margin-bottom: .4rem;
+
+}
+
+.back-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+
+}
+
+.bookmark-container {
+    display: flex;
+    align-items: center;
+    background: hsl(0, 4%, 78%);
+    border-radius: 1.5rem;
+    padding-right: .5rem;
+    margin-top: .9rem;
+    cursor: pointer;
+}
+
+.bookmark-container>p {
+    padding: 0 .5rem;
+}
+
+.project {
+    background: var(--Moderatecyan);
+    padding: 1rem;
+    border: .8rem 1rem;
+    border-radius: 1.5rem;
+    color: #fff;
+    cursor: pointer;
+    margin-top: .9rem;
+
+}
+
+.section_2 {
+    width: 50%;
+    background: #fff;
+    margin: 1rem auto;
+    border-radius: .3rem;
+    padding: 1.5rem;
+}
+
+.detail_wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.left {
+    border-right: .2rem solid hsl(0, 2%, 90%);
+    padding-right: 2rem;
+}
+
+.left:last-child {
+    border: none;
+}
+
+.left>p {
+    margin-top: .5rem;
+    font-size: .6rem;
+}
+
+.progress-bar {
+    background: hsl(0, 2%, 90%);
+    width: 100%;
+    height: 1rem;
+    margin-top: 1.5rem;
+    border-radius: .6rem;
+}
+
+.progress-bar>div {
+    background: var(--Moderatecyan);
+    width: 80%;
+    height: 1rem;
+    margin-top: 1.5rem;
+    border-radius: .6rem;
+}
+
+.about-section {
+    width: 50%;
+    background: #fff;
+    margin: 1rem auto;
+    border-radius: .3rem;
+    padding: 1.5rem;
+}
+
+.about-section>h2 {
+    font-size: .9rem;
+    margin-bottom: 1rem;
+}
+
+.about-section>p {
+    font-size: 1rem;
+    text-align: justify;
+    margin-bottom: .6rem;
+    line-height: 1.4rem;
+
+}
+
+.about-section:last-child {
+    margin-top: .7rem;
+
+}
+
+.reward-wrapper {
+    border: .1rem solid hsl(0, 2%, 90%);
+    border-radius: .2rem;
+    padding: 1rem;
+    margin-bottom: .5rem;
+    margin-top: 1.5rem;
+}
+
+.bamboo-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: .8rem;
+}
+
+.bamboo-wrapper>h3 {
+    font-size: .9rem;
+    margin-bottom: 1rem;
+    font-weight: 800;
+}
+
+.bamboo-wrapper>p {
+    color: var(--Moderatecyan);
+    font-weight: 700;
+}
+
+.about-description {
+    /* font-size: .8rem; */
+    /* text-align: justify; */
+    margin-bottom: .6rem;
+    line-height: 1.4rem;
+}
+
+.reward-left {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+.amount-left {
+    display: flex;
+}
+
+.amount-left>h1 {
+    font-weight: 800;
+    margin-right: .3rem;
+}
+
+.amount-left>span {
+    font-size: .7rem;
+}
+
+.reward-left>p {
+    background: var(--Moderatecyan);
+    color: #fff;
+    border-radius: 2.5rem;
+    padding: .6rem .8rem;
+    cursor: pointer;
+}
+
+.edit>h3,
+.edit>p,
+.edit>h1,
+.edit span {
+    opacity: .4;
+}
+
+.disabled>p {
+    background: hsl(0, 2%, 90%);
+    cursor: text;
+}
+
+.modal {
+    width: 100%;
+    /* height: 100vh; */
+    background: rgba(0, 0, 0, .3);
+    position: absolute;
+    top: 0;
+    display: none;
+    cursor: pointer;
+}
+
+.modal-wrapper {
+    width: 50%;
+    /* height: 350px; */
+    margin: 7rem auto;
+    background: #fff;
+    border-radius: .5rem;
+    padding: 1.5rem;
+}
+
+.modal-wrapper>span>img {
+    float: right;
+}
+
+.heading {
+    margin-top: 1.5rem;
+}
+.heading>h2 {
+    margin-bottom: 1rem;
+}
+.pledge {
+    border: .1rem solid hsl(0, 2%, 90%);
+    padding: 1.5rem .5rem;
+    border-radius: .5rem;
+    margin-top: 2rem;
+    display: flex;
+    align-items: flex-start;
+    cursor: pointer;
+}
+.pledge:hover{
+    border: .1rem solid var(--Moderatecyan);
+}
+.pledge>input[type='radio']{
+    border: .1rem solid var(--Darkgray);
+    margin-right:  1rem;
+    margin-left: 1.5rem;
+}
+.p-right>h3{
+    margin-bottom: 1rem;
+    /* font-size: .8rem; */
+}
+.p-right>p{
+    /* font-size: .8rem; */
+    line-height: 1.5rem;
+    color: var(--Darkgray);
+}
+.p-right-wrapper{
+    /* font-size: .8rem; */
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1.5rem;
+
+}
+.fix-pledge{
+    color: var(--Moderatecyan);
+    margin-left: .5rem;
+}
+.fix-left{
+    color: var(--Darkgray);
+    margin-right: 1rem;
+    font-weight: 100;
+
+}
+.select-payment{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2rem;
+    border-top: .1rem solid hsl(0, 2%, 90%);
+    padding: 1.5rem 1.5rem 1rem 1.5rem;
+    margin-left: -3rem;
+}
+.select-payment>p{
+    width: 70%;
+    font-size: .8rem;
+    font-weight: 500;
+    color: var(--Darkgray);
+}
+.select-amount>input{
+    padding: .8rem;
+    border-radius: 1.5rem;
+    width: 50%;
+    outline: none;
+    border: .1rem solid hsl(0, 2%, 90%);
+    margin-right: .5rem;
+}
+.select-amount>button{
+    padding: .8rem;
+    background: var(--Moderatecyan);
+    color: #fff;
+    outline: none;
+    border: none;
+    border-radius: 1.5rem;
+    cursor: pointer;
+}
+#close-me{
+    display: none;
+}
+@media (max-width:480px) {
+    body{
+        position: relative;
+    }
+    .header{
+        background-image: url(./images/image-hero-mobile.jpg);
+        background-size: 100%;
+    }
+    .section_1{
+        width: 70%;
+        margin: -3rem auto;
+    
+    }
+    .menu-icon{
+        display: block;
+    }
+    .nav-wrapper{
+        background: rgba(0, 0, 0, .3);
+        width: 100%;
+        height: 100vh;
+        position: absolute;
+        top: 0;
+        left: 0;
+        padding: 1rem;
+        display: none;
+    }
+    .close-menu{
+        display: block;
+        float: right;
+        margin-right: 1.5rem;
+
+    }
+    ul{
+        /* margin-top: 2.5rem; */
+        background: white;
+        padding: 1.5rem;
+        margin: 2.5rem auto 1rem auto;
+        width: 80%;
+        border-radius: .7rem;
+    }
+    ul>li{
+        display: block;
+        margin-bottom: 2rem;
+        border-bottom: .1rem solid hsl(0, 0%, 81%);
+        padding-bottom: 1rem;
+        
+    }
+    ul>li:last-child{
+        margin-bottom: 0;
+        border-bottom: none;
+    }
+    ul>li>a {
+        color: black;
+    }
+    .bookmark-container {
+        background: none;
+    }
+    .bookmark-container>p {
+        display: none;
+        cursor: pointer;
+    }
+    .section_2 {
+        width: 70%;
+        margin-top: 4rem;
+    }
+    .left>h1{
+        font-size: 1.2rem;
+    }
+    .middle{
+        padding-left: .5rem;
+    }
+    .right{
+        padding-left: .5rem;
+    }
+    .about-section {
+        width: 70%;
+        margin-top: 1rem;
+    }
+    .about-section > p {
+        font-size: 1rem;
+        margin-bottom: .6rem;
+        line-height: 1.2rem;
+    }
+}
+
+
