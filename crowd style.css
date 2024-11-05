@@ -107,7 +107,8 @@ ul>li>a {
 
 }
 .phkfund {
-    color:#fff;
+    color: #fff;
+    cursor: pointer;
 }
 .section_2 {
     width: 50%;
